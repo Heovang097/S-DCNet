@@ -1,14 +1,14 @@
 import os
+import jupyter as jp
 import numpy as np 
 from main_process import main
 from IOtools import txt_write
 
 
-if __name__ == '__main__':
-    
-    
-    opt = dict()
 
+
+if __name__ == '__main__':
+    opt = dict()
     dataset_list = {0:'SH_partA_Density_map',1:'SH_partB_Density_map'}
     model_list = {0:'model/SHA',1:'model/SHB'}
     max_num_list = {0:22,1:7}
@@ -19,7 +19,7 @@ if __name__ == '__main__':
     opt['IF_savemem_test'] = False
     opt['test_batch_size'] = 1
 
-    # --Network settinng    
+    # --Network settinng
     opt['psize'],opt['pstride'] = 64,64
 
     

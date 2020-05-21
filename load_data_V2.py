@@ -56,6 +56,7 @@ class myDataset(Dataset):
         
         
         img_name = os.path.join(self.img_dir,'*.jpg')
+
         self.filelist =  glob.glob(img_name)
         self.dataset_len = len(self.filelist)
         
@@ -72,6 +73,9 @@ class myDataset(Dataset):
         # ------------------------------------
         if (not self.IF_loadmem) or (not self.IF_loadFinished): 
             img_name =self.filelist[idx]
+            #Check image name
+            print(str(img_name),end=' ')
+            #
             image = io.imread(img_name) #load as numpy ndarray
             image = image/255. -self.rgb #to normalization,auto to change dtype
             

@@ -19,7 +19,6 @@ def get_local_count(density_map,psize,pstride):
     count_map = F.conv2d(density_map,conv_kernel,stride=pstride)
     if not IF_ret_gpu:
         count_map = count_map.cpu()
-    
     return count_map
 
 

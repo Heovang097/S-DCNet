@@ -56,6 +56,10 @@ def main(opt):
     testloader = DataLoader(testset, batch_size=opt['test_batch_size'],
                             shuffle=False, num_workers=num_workers)
 
+    #addition code 03/05/2020
+    #print(str(testset.img_dir))
+    #end
+
     # init networks
     label_indice = torch.Tensor(label_indice)
     class_num = len(label_indice)+1

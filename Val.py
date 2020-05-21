@@ -46,6 +46,7 @@ def test_phase(opt,net,testloader,log_save_path=None):
             del merge_res
          
             pre =  (outputs).sum()
+
             gt = labels.sum()
                                              
             mae += abs(pre-gt)
